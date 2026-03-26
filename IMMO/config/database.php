@@ -50,7 +50,7 @@ class Database {
         "
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            login VARCHAR(25) NOT NULL,
+            login VARCHAR(75) NOT NULL,
             password VARCHAR(25) NOT NULL,
             date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
             updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
@@ -58,7 +58,7 @@ class Database {
         
 
         $this->pdo->exec($sql);
-    
+
     }
     
     public function getConnection() {
